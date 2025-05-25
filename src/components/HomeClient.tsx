@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { FaHome, FaUser, FaProjectDiagram, FaSun, FaMoon } from "react-icons/fa";
+import { FaHome, FaSun, FaMoon } from "react-icons/fa";
 import { HTMLMotionProps } from "framer-motion";
 
 // Define typed motion components
@@ -97,7 +97,7 @@ export default function HomeClient({ posts }: { posts: { slug: string; title: st
               <FaHome />
               <span>Home</span>
             </Link>
-            <Link
+            {/* <Link
               href="/projects"
               className="flex items-center gap-2 text-lg text-gray-700 dark:text-gray-200 hover:text-primary transition-colors"
             >
@@ -110,7 +110,7 @@ export default function HomeClient({ posts }: { posts: { slug: string; title: st
             >
               <FaUser />
               <span>About</span>
-            </Link>
+            </Link> */}
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
